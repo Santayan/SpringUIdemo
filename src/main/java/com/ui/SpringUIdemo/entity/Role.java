@@ -8,6 +8,7 @@ import java.util.List;
 @Entity
 public class Role {
 
+//    Role
     @Id
     private String name;
     @ManyToMany(mappedBy = "roles")
