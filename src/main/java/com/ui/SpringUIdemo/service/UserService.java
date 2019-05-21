@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -42,4 +43,15 @@ public class UserService {
     }
 
 
+    public boolean isUserPresent(String email) {
+//        User u = userRepository.getOne(email);
+        Optional<User> u = userRepository.findById(email);
+        if(u.isPresent()){
+            return true;
+        }
+
+        else {
+            return false;
+        }
+    }
 }
