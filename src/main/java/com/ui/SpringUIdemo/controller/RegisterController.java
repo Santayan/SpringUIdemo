@@ -36,7 +36,7 @@ public class RegisterController {
             return "fragments/views/registerForm";
         }
         userService.createUser(user);
-        return "fragments/views/registerForm";
+        return "fragments/views/success";
 
 
     }

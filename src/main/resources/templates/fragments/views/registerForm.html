@@ -8,8 +8,9 @@
 <body>
 
 <div layout:fragment="content" class="container mySpace">
-    <div class="alert alert-info" th:if="${exist}"></div>
+    <div class="alert alert-info" th:if="${exist}">
     <p class="text text-center"> User With This Email Already Exist </p>
+    </div>
 <form th:action="@{/register}" th:object="${user}" method="post">
 
     <div class="form-group">
